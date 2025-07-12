@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Khushi | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -56,78 +56,45 @@
 
     .main {
       margin-left: 240px;
-      padding: 3rem;
-      flex-grow: 1;
+      padding: 4rem 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
     }
 
     .hero h1 {
-      font-size: 3.5rem;
-      margin-bottom: 0.5rem;
+      font-size: 5rem;
+      margin: 0.3rem;
+      font-weight: 900;
     }
 
     .hero h1 .pink {
-      color: #ff00cc;
+      color: #ff007f;
+      text-shadow: 0 0 10px #ff007f, 0 0 20px #ff007f, 0 0 30px #ff007f;
     }
 
     .hero p {
-      font-size: 1.5rem;
-      animation: colorShift 5s infinite;
-    }
-
-    @keyframes colorShift {
-      0% { color: #00ffe7; }
-      33% { color: #ff00cc; }
-      66% { color: #00ccff; }
-      100% { color: #00ffe7; }
-    }
-
-    .section {
-      margin-top: 5rem;
-    }
-
-    .skills, .soon-boxes, .certs {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
+      font-size: 2rem;
+      font-weight: 600;
       margin-top: 1rem;
+      background: linear-gradient(90deg, #00ffe7, #ff00cc, #00ccff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glowText 5s infinite linear;
     }
 
-    .skill-box, .soon-box, .cert-box {
-      background: linear-gradient(145deg, #1a1a1a, #222);
-      padding: 1rem 1.5rem;
-      border-radius: 12px;
-      font-weight: 600;
-      box-shadow: 0 0 12px #0ff2;
-      transition: 0.3s;
-    }
-
-    .skill-box:hover, .soon-box:hover, .cert-box:hover {
-      transform: scale(1.05);
-      background-color: #222;
-    }
-
-    .project {
-      background-color: #141414;
-      padding: 1.5rem;
-      border-radius: 12px;
-      margin-bottom: 1rem;
-    }
-
-    .project a {
-      color: #00ffe7;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .resume-button {
-      margin-top: 1rem;
-      display: inline-block;
-      padding: 10px 20px;
-      border-radius: 8px;
-      background: #00ffe7;
-      color: #000;
-      font-weight: 600;
-      text-decoration: none;
+    @keyframes glowText {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
     }
   </style>
 </head>
@@ -151,65 +118,11 @@
   </div>
 
   <div class="main">
-    <section class="hero">
+    <div class="hero">
       <h1>Hi,</h1>
       <h1>I'm <span class="pink">K</span>hushi</h1>
-      <p>a data science enthusiast...</p>
-    </section>
-
-    <section id="skills" class="section">
-      <h2>My Skills</h2>
-      <div class="skills">
-        <div class="skill-box">Python</div>
-        <div class="skill-box">Pandas</div>
-        <div class="skill-box">NumPy</div>
-        <div class="skill-box">SQL</div>
-        <div class="skill-box">Scikit-learn</div>
-        <div class="skill-box">Power BI</div>
-        <div class="skill-box">Excel</div>
-        <div class="skill-box">Matplotlib</div>
-        <div class="skill-box">Seaborn</div>
-        <div class="skill-box">HTML</div>
-        <div class="skill-box">Git</div>
-        <div class="skill-box">NLP</div>
-        <div class="skill-box">Generative AI</div>
-      </div>
-    </section>
-
-    <section id="projects" class="section">
-      <h2>Projects</h2>
-      <div class="project">
-        <p>📌 <a href="https://github.com/Khushi9912/Bank-Term-Deposit-Prediction" target="_blank">Bank Term Deposit Prediction</a></p>
-      </div>
-      <div class="project">
-        <p>📌 <a href="https://github.com/Khushi9912/Airline-Passenger-Satisfaction-Prediction" target="_blank">Airline Passenger Satisfaction Prediction</a></p>
-      </div>
-    </section>
-
-    <section id="soon" class="section">
-      <h2>Soon to be Projects</h2>
-      <div class="soon-boxes">
-        <div class="soon-box">BizGPT</div>
-        <div class="soon-box">Personal Budget Tracker</div>
-      </div>
-    </section>
-
-    <section id="certs" class="section">
-      <h2>Certificates</h2>
-      <div class="certs">
-        <a class="cert-box" href="https://drive.google.com/drive/folders/1K7CuWIKz-yxh7GgGuJXpQmpZU9UzJGN_" target="_blank">Python – Learnbay</a>
-        <a class="cert-box" href="https://drive.google.com/drive/folders/1K7CuWIKz-yxh7GgGuJXpQmpZU9UzJGN_" target="_blank">SQL & MongoDB – Learnbay</a>
-        <a class="cert-box" href="https://drive.google.com/drive/folders/1K7CuWIKz-yxh7GgGuJXpQmpZU9UzJGN_" target="_blank">Machine Learning – Learnbay</a>
-        <a class="cert-box" href="https://drive.google.com/drive/folders/1K7CuWIKz-yxh7GgGuJXpQmpZU9UzJGN_" target="_blank">Deployment – Learnbay</a>
-        <a class="cert-box" href="https://drive.google.com/drive/folders/1K7CuWIKz-yxh7GgGuJXpQmpZU9UzJGN_" target="_blank">Excel – IBM</a>
-        <a class="cert-box" href="https://drive.google.com/drive/folders/1K7CuWIKz-yxh7GgGuJXpQmpZU9UzJGN_" target="_blank">Power BI – Learnbay</a>
-      </div>
-    </section>
-
-    <section id="resume" class="section">
-      <h2>Resume</h2>
-      <a class="resume-button" href="https://drive.google.com/file/d/1dmrBnhrcO0OtSVn8iEIiIRHqYSRc5Ee5/view?usp=sharing" target="_blank">View Resume</a>
-    </section>
+      <p>Data Science Enthusiast.</p>
+    </div>
   </div>
 </body>
 
