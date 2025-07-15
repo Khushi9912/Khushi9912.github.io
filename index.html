@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Khushi's Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Orbitron', sans-serif;
+            font-family: 'Handlee', cursive;
         }
 
         body {
@@ -23,36 +24,47 @@
         nav {
             width: 250px;
             background-color: #111;
-            padding: 40px 20px;
+            padding: 30px 20px;
             height: 100vh;
             position: fixed;
             left: 0;
             top: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
-        nav h1 {
-            font-size: 50px;
-            color: #ff0050;
-            text-shadow: 2px 2px cyan;
-            margin-bottom: 50px;
-        }
-
-        nav ul {
+        .nav-top ul {
             list-style: none;
         }
 
-        nav ul li {
-            margin: 20px 0;
+        .nav-top ul li {
+            margin: 25px 0;
         }
 
-        nav ul li a {
+        .nav-top ul li a {
             color: white;
             text-decoration: none;
             font-size: 18px;
             transition: 0.3s;
         }
 
-        nav ul li a:hover {
+        .nav-top ul li a:hover {
+            color: cyan;
+        }
+
+        .nav-bottom {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-bottom a {
+            color: white;
+            font-size: 24px;
+            transition: 0.3s;
+        }
+
+        .nav-bottom a:hover {
             color: cyan;
         }
 
@@ -125,16 +137,21 @@
 
 <body>
     <nav>
-        <h1>K</h1>
-        <ul>
-            <li><a href="#" onclick="showSection('skills')">My Skills</a></li>
-            <li><a href="#" onclick="showSection('projects')">Projects</a></li>
-            <li><a href="#" onclick="showSection('soon')">Soon to be Projects</a></li>
-            <li><a href="#" onclick="showSection('certificates')">Certificates</a></li>
-            <li><a href="#" onclick="showSection('resume')">Resume</a></li>
-            <li><a href="https://www.linkedin.com/in/khushi-pal-490451214/" target="_blank">LinkedIn</a></li>
-            <li><a href="https://github.com/Khushi9912" target="_blank">GitHub</a></li>
-        </ul>
+        <div class="nav-top">
+            <ul>
+                <li><a href="#" onclick="showSection('landing')">About</a></li>
+                <li><a href="#" onclick="showSection('skills')">My Skills</a></li>
+                <li><a href="#" onclick="showSection('projects')">Projects</a></li>
+                <li><a href="#" onclick="showSection('soon')">Soon to be Projects</a></li>
+                <li><a href="#" onclick="showSection('certificates')">Certificates</a></li>
+                <li><a href="#" onclick="showSection('resume')">Resume</a></li>
+                <li><a href="#" onclick="showSection('blogs')">Blogs</a></li>
+            </ul>
+        </div>
+        <div class="nav-bottom">
+            <a href="https://www.linkedin.com/in/khushi-pal-490451214/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Khushi9912" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
     </nav>
 
     <main>
@@ -172,6 +189,11 @@
         <section id="resume">
             <h2>📄 Resume</h2>
             <a href="https://drive.google.com/file/d/1dmrBnhrcO0OtSVn8iEIiIRHqYSRc5Ee5/view?usp=sharing" target="_blank">Download Resume</a>
+        </section>
+
+        <section id="blogs">
+            <h2>📝 Blogs</h2>
+            <p>Coming soon...</p>
         </section>
     </main>
 
