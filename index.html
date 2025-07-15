@@ -23,7 +23,7 @@
         nav {
             width: 250px;
             background-color: #111;
-            padding: 20px 20px;
+            padding: 20px;
             height: 100vh;
             position: fixed;
             left: 0;
@@ -52,25 +52,25 @@
             color: cyan;
         }
 
-        .social-icons {
+        .socials {
             display: flex;
-            justify-content: space-between;
-            padding: 10px 5px;
+            gap: 10px;
+            padding: 10px 0;
         }
 
-        .social-icons a {
-            color: white;
-            font-size: 20px;
+        .socials a img {
+            width: 24px;
+            height: 24px;
         }
 
         main {
             margin-left: 250px;
-            padding: 60px;
             width: calc(100% - 250px);
         }
 
         section {
             display: none;
+            padding: 0 60px;
             animation: fadeIn 1s ease;
         }
 
@@ -84,15 +84,17 @@
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
+            padding-top: 20px;
         }
 
         #landing h2 {
-            font-size: 60px;
-            margin-bottom: 10px;
+            font-size: 100px;
+            margin-bottom: 0px;
         }
 
         #landing h1 {
-            font-size: 80px;
+            font-size: 120px;
+            line-height: 1;
         }
 
         #landing h1 span {
@@ -101,28 +103,12 @@
         }
 
         #landing h3 {
-            font-size: 30px;
-            background: linear-gradient(to right, cyan, magenta, white);
+            font-size: 50px;
+            margin-top: 20px;
+            background: linear-gradient(to right, cyan, violet, magenta);
             -webkit-background-clip: text;
             color: transparent;
             animation: colorCycle 5s infinite alternate;
-        }
-
-        #about {
-            display: flex;
-            gap: 40px;
-            align-items: flex-start;
-            padding-top: 50px;
-        }
-
-        #about img {
-            width: 300px;
-            border-radius: 10px;
-        }
-
-        #about p {
-            line-height: 1.8;
-            font-size: 18px;
         }
 
         @keyframes colorCycle {
@@ -149,18 +135,24 @@
 
 <body>
     <nav>
-        <ul>
-            <li><a href="#" onclick="showSection('about')">About</a></li>
-            <li><a href="#" onclick="showSection('skills')">My Skills</a></li>
-            <li><a href="#" onclick="showSection('projects')">Projects</a></li>
-            <li><a href="#" onclick="showSection('soon')">Soon to be Projects</a></li>
-            <li><a href="#" onclick="showSection('certificates')">Certificates</a></li>
-            <li><a href="#" onclick="showSection('resume')">Resume</a></li>
-            <li><a href="#" onclick="showSection('blogs')">Blogs</a></li>
-        </ul>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/khushi-pal-490451214/" target="_blank">🔗</a>
-            <a href="https://github.com/Khushi9912" target="_blank">🐱</a>
+        <div>
+            <ul>
+                <li><a href="#" onclick="showSection('landing')">About</a></li>
+                <li><a href="#" onclick="showSection('skills')">My Skills</a></li>
+                <li><a href="#" onclick="showSection('projects')">Projects</a></li>
+                <li><a href="#" onclick="showSection('soon')">Soon to be Projects</a></li>
+                <li><a href="#" onclick="showSection('certificates')">Certificates</a></li>
+                <li><a href="#" onclick="showSection('resume')">Resume</a></li>
+                <li><a href="#" onclick="showSection('blogs')">Blogs</a></li>
+            </ul>
+        </div>
+        <div class="socials">
+            <a href="https://www.linkedin.com/in/khushi-pal-490451214/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/Khushi9912" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
+            </a>
         </div>
     </nav>
 
@@ -169,24 +161,6 @@
             <h2>Hi,</h2>
             <h1>I'm <span>K</span>hushi</h1>
             <h3>Data Science Enthusiast.</h3>
-        </section>
-
-        <section id="about">
-            <img src="https://via.placeholder.com/300" alt="Khushi Image">
-            <p>
-                Hey there! I’m <strong>Khushi</strong>, a self-driven and curious mind currently diving deep into the world of <strong>Data Science</strong> and <strong>Artificial Intelligence</strong>.
-                With a strong foundation in Python, SQL, Pandas, and Machine Learning, I love exploring how data can tell powerful stories and solve real-world problems.
-                I’ve built hands-on projects using tools like Power BI, Excel, Scikit-learn, Matplotlib, and I’m gradually mastering areas like NLP and Generative AI — because the future belongs to those who think with data and build with AI.
-                <br><br>
-                🎯 <strong>My Goals:</strong>
-                <ul>
-                    <li>Become a strong Data Scientist with technical & business understanding</li>
-                    <li>Work on real-world impactful AI projects</li>
-                    <li>Contribute to open-source and tech communities</li>
-                    <li>Build a career with growth, freedom, and global opportunities</li>
-                </ul>
-                Outside of tech, I enjoy exploring tools, helping others learn, and dreaming big. Let’s turn data into decisions, and ideas into innovation. 🚀
-            </p>
         </section>
 
         <section id="skills">
