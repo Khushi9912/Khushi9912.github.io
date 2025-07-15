@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Khushi's Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -24,7 +23,7 @@
         nav {
             width: 250px;
             background-color: #111;
-            padding: 20px;
+            padding: 20px 20px;
             height: 100vh;
             position: fixed;
             left: 0;
@@ -45,7 +44,7 @@
         nav ul li a {
             color: white;
             text-decoration: none;
-            font-size: 20px;
+            font-size: 18px;
             transition: 0.3s;
         }
 
@@ -53,39 +52,47 @@
             color: cyan;
         }
 
-        .socials {
+        .social-icons {
             display: flex;
-            gap: 10px;
-            padding: 10px 0;
+            justify-content: space-between;
+            padding: 10px 5px;
         }
 
-        .socials a {
+        .social-icons a {
             color: white;
-            font-size: 24px;
+            font-size: 20px;
         }
 
         main {
             margin-left: 250px;
-            padding: 40px 60px;
+            padding: 60px;
             width: calc(100% - 250px);
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        }
+
+        section {
+            display: none;
+            animation: fadeIn 1s ease;
+        }
+
+        section.active {
+            display: block;
         }
 
         #landing {
-            text-align: left;
-            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
         }
 
         #landing h2 {
-            font-size: 70px;
+            font-size: 60px;
             margin-bottom: 10px;
         }
 
         #landing h1 {
-            font-size: 100px;
+            font-size: 80px;
         }
 
         #landing h1 span {
@@ -94,16 +101,48 @@
         }
 
         #landing h3 {
-            font-size: 36px;
-            background: linear-gradient(to right, cyan, violet, magenta);
+            font-size: 30px;
+            background: linear-gradient(to right, cyan, magenta, white);
             -webkit-background-clip: text;
             color: transparent;
-            animation: colorShift 3s ease-in-out infinite alternate;
+            animation: colorCycle 5s infinite alternate;
         }
 
-        @keyframes colorShift {
-            0% {opacity: 0.8;}
-            100% {opacity: 1;}
+        #about {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+            padding-top: 50px;
+        }
+
+        #about img {
+            width: 300px;
+            border-radius: 10px;
+        }
+
+        #about p {
+            line-height: 1.8;
+            font-size: 18px;
+        }
+
+        @keyframes colorCycle {
+            0% {
+                background-position: 0%;
+            }
+            100% {
+                background-position: 100%;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
@@ -111,27 +150,78 @@
 <body>
     <nav>
         <ul>
-            <li><a href="#">About</a></li>
+            <li><a href="#" onclick="showSection('about')">About</a></li>
             <li><a href="#" onclick="showSection('skills')">My Skills</a></li>
             <li><a href="#" onclick="showSection('projects')">Projects</a></li>
             <li><a href="#" onclick="showSection('soon')">Soon to be Projects</a></li>
             <li><a href="#" onclick="showSection('certificates')">Certificates</a></li>
             <li><a href="#" onclick="showSection('resume')">Resume</a></li>
-            <li><a href="#">Blogs</a></li>
+            <li><a href="#" onclick="showSection('blogs')">Blogs</a></li>
         </ul>
-        <div class="socials">
-            <a href="https://www.linkedin.com/in/khushi-pal-490451214/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/Khushi9912" target="_blank"><i class="fab fa-github"></i></a>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/khushi-pal-490451214/" target="_blank">🔗</a>
+            <a href="https://github.com/Khushi9912" target="_blank">🐱</a>
         </div>
     </nav>
 
     <main>
         <section id="landing" class="active">
-            <div>
-                <h2>Hi,</h2>
-                <h1>I'm <span>K</span>hushi</h1>
-                <h3>Data Science Enthusiast.</h3>
-            </div>
+            <h2>Hi,</h2>
+            <h1>I'm <span>K</span>hushi</h1>
+            <h3>Data Science Enthusiast.</h3>
+        </section>
+
+        <section id="about">
+            <img src="https://via.placeholder.com/300" alt="Khushi Image">
+            <p>
+                Hey there! I’m <strong>Khushi</strong>, a self-driven and curious mind currently diving deep into the world of <strong>Data Science</strong> and <strong>Artificial Intelligence</strong>.
+                With a strong foundation in Python, SQL, Pandas, and Machine Learning, I love exploring how data can tell powerful stories and solve real-world problems.
+                I’ve built hands-on projects using tools like Power BI, Excel, Scikit-learn, Matplotlib, and I’m gradually mastering areas like NLP and Generative AI — because the future belongs to those who think with data and build with AI.
+                <br><br>
+                🎯 <strong>My Goals:</strong>
+                <ul>
+                    <li>Become a strong Data Scientist with technical & business understanding</li>
+                    <li>Work on real-world impactful AI projects</li>
+                    <li>Contribute to open-source and tech communities</li>
+                    <li>Build a career with growth, freedom, and global opportunities</li>
+                </ul>
+                Outside of tech, I enjoy exploring tools, helping others learn, and dreaming big. Let’s turn data into decisions, and ideas into innovation. 🚀
+            </p>
+        </section>
+
+        <section id="skills">
+            <h2>💡 Skills</h2>
+            <p>Python, Pandas, NumPy, SQL, Scikit-learn, Power BI, Excel, Matplotlib, Seaborn, Git, NLP, Generative AI</p>
+        </section>
+
+        <section id="projects">
+            <h2>🚀 Projects</h2>
+            <ul>
+                <li><a href="https://github.com/Khushi9912/Bank-Term-Deposit-Prediction" target="_blank">Bank Term Deposit Prediction</a></li>
+                <li><a href="https://github.com/Khushi9912/Airline-Passenger-Satisfaction-Prediction" target="_blank">Airline Passenger Satisfaction</a></li>
+            </ul>
+        </section>
+
+        <section id="soon">
+            <h2>🛠️ Soon to be Projects</h2>
+            <p>BizGPT, Budget Tracker</p>
+        </section>
+
+        <section id="certificates">
+            <h2>📜 Certificates</h2>
+            <ul>
+                <li><a href="https://drive.google.com/drive/folders/1K7CuWIKz-yxh7GgGuJXpQmpZU9UzJGN_" target="_blank">View Certificates</a></li>
+            </ul>
+        </section>
+
+        <section id="resume">
+            <h2>📄 Resume</h2>
+            <a href="https://drive.google.com/file/d/1dmrBnhrcO0OtSVn8iEIiIRHqYSRc5Ee5/view?usp=sharing" target="_blank">Download Resume</a>
+        </section>
+
+        <section id="blogs">
+            <h2>📝 Blogs</h2>
+            <p>Coming soon...</p>
         </section>
     </main>
 
@@ -139,7 +229,7 @@
         function showSection(id) {
             const sections = document.querySelectorAll('main section');
             sections.forEach(section => section.classList.remove('active'));
-            document.getElementById(id)?.classList.add('active');
+            document.getElementById(id).classList.add('active');
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
