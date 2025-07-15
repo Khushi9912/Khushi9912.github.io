@@ -2,173 +2,187 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Khushi | Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Outfit:wght@300;400;700&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Orbitron', sans-serif;
-      background-color: #000;
-      color: #fff;
-      overflow-x: hidden;
-      display: flex;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khushi's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Orbitron', sans-serif;
+        }
 
-    aside {
-      width: 220px;
-      background: #111;
-      padding: 30px 15px;
-      display: flex;
-      flex-direction: column;
-      gap: 25px;
-      font-family: 'Outfit', sans-serif;
-    }
+        body {
+            background-color: #0d0d0d;
+            color: white;
+            display: flex;
+        }
 
-    .logo {
-      font-size: 50px;
-      font-weight: 800;
-      margin-bottom: 50px;
-      color: #ff0050;
-      text-shadow: -1px 1px 0 #00f2ea, 1px -1px 0 #00f2ea;
-      text-align: center;
-    }
+        nav {
+            width: 250px;
+            background-color: #111;
+            padding: 40px 20px;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
 
-    aside a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 16px;
-      padding: 5px 0;
-    }
+        nav h1 {
+            font-size: 50px;
+            color: #ff0050;
+            text-shadow: 2px 2px cyan;
+            margin-bottom: 50px;
+        }
 
-    aside a:hover {
-      color: #ff0050;
-    }
+        nav ul {
+            list-style: none;
+        }
 
-    main {
-      flex-grow: 1;
-      padding: 80px 50px;
-      text-align: left;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
+        nav ul li {
+            margin: 20px 0;
+        }
 
-    h1 {
-      font-size: 60px;
-      margin: 0;
-      font-weight: 800;
-      letter-spacing: 2px;
-    }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+        }
 
-    .name-line {
-      font-size: 75px;
-      font-weight: 800;
-    }
+        nav ul li a:hover {
+            color: cyan;
+        }
 
-    .name-line .k {
-      color: #ff0050;
-      text-shadow: -2px 2px 0 #00f2ea, 2px -2px 0 #00f2ea;
-    }
+        main {
+            margin-left: 250px;
+            padding: 60px;
+            width: calc(100% - 250px);
+        }
 
-    .enthusiast-line {
-      font-size: 28px;
-      font-family: 'Outfit', sans-serif;
-      background: linear-gradient(90deg, #00f2ea, #ff0050, #00f2ea);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: wave 5s infinite linear;
-    }
+        section {
+            display: none;
+            animation: fadeIn 1s ease;
+        }
 
-    @keyframes wave {
-      0% {
-        background-position: 0% 50%;
-      }
-      100% {
-        background-position: 100% 50%;
-      }
-    }
+        section.active {
+            display: block;
+        }
 
-    section {
-      padding: 20px 0;
-      max-width: 800px;
-    }
+        #landing {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
 
-    .section-title {
-      font-size: 30px;
-      color: #00f2ea;
-      margin: 20px 0 10px;
-      font-weight: bold;
-    }
+        #landing h2 {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
 
-    .card {
-      background: #111;
-      padding: 15px;
-      border-radius: 8px;
-      margin-bottom: 15px;
-      border: 1px solid #333;
-      transition: 0.3s;
-    }
+        #landing h1 {
+            font-size: 80px;
+        }
 
-    .card:hover {
-      border-color: #ff0050;
-      transform: scale(1.02);
-    }
+        #landing h1 span {
+            color: #ff0050;
+            text-shadow: 2px 2px cyan;
+        }
 
-    .card a {
-      color: #00f2ea;
-      text-decoration: none;
-    }
-  </style>
+        #landing h3 {
+            font-size: 30px;
+            background: linear-gradient(to right, cyan, magenta, white);
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: colorCycle 5s infinite alternate;
+        }
+
+        @keyframes colorCycle {
+            0% {
+                background-position: 0%;
+            }
+            100% {
+                background-position: 100%;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <aside>
-    <div class="logo">K</div>
-    <a href="#skills">My Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#soon">Soon to be Projects</a>
-    <a href="#certificates">Certificates</a>
-    <a href="#resume">Resume</a>
-    <a href="https://www.linkedin.com/in/khushi-pal-490451214/" target="_blank">LinkedIn</a>
-    <a href="https://github.com/Khushi9912" target="_blank">GitHub</a>
-  </aside>
+    <nav>
+        <h1>K</h1>
+        <ul>
+            <li><a href="#" onclick="showSection('skills')">My Skills</a></li>
+            <li><a href="#" onclick="showSection('projects')">Projects</a></li>
+            <li><a href="#" onclick="showSection('soon')">Soon to be Projects</a></li>
+            <li><a href="#" onclick="showSection('certificates')">Certificates</a></li>
+            <li><a href="#" onclick="showSection('resume')">Resume</a></li>
+            <li><a href="https://www.linkedin.com/in/khushi-pal-490451214/" target="_blank">LinkedIn</a></li>
+            <li><a href="https://github.com/Khushi9912" target="_blank">GitHub</a></li>
+        </ul>
+    </nav>
 
-  <main>
-    <h1>Hi,</h1>
-    <div class="name-line">I'm <span class="k">K</span>hushi</div>
-    <div class="enthusiast-line">Data Science Enthusiast.</div>
+    <main>
+        <section id="landing" class="active">
+            <h2>Hi,</h2>
+            <h1>I'm <span>K</span>hushi</h1>
+            <h3>Data Science Enthusiast.</h3>
+        </section>
 
-    <section id="skills">
-      <div class="section-title">💡 Skills</div>
-      <div class="card">Python, Pandas, NumPy, SQL, Scikit-learn, Power BI, Excel, Matplotlib, Seaborn, HTML, Git, NLP, Generative AI</div>
-    </section>
+        <section id="skills">
+            <h2>💡 Skills</h2>
+            <p>Python, Pandas, NumPy, SQL, Scikit-learn, Power BI, Excel, Matplotlib, Seaborn, Git, NLP, Generative AI</p>
+        </section>
 
-    <section id="projects">
-      <div class="section-title">🚀 Projects</div>
-      <div class="card"><a href="https://github.com/Khushi9912/Bank-Term-Deposit-Prediction" target="_blank">Bank Term Deposit Prediction</a></div>
-      <div class="card"><a href="https://github.com/Khushi9912/Airline-Passenger-Satisfaction-Prediction" target="_blank">Airline Passenger Satisfaction</a></div>
-    </section>
+        <section id="projects">
+            <h2>🚀 Projects</h2>
+            <ul>
+                <li><a href="https://github.com/Khushi9912/Bank-Term-Deposit-Prediction" target="_blank">Bank Term Deposit Prediction</a></li>
+                <li><a href="https://github.com/Khushi9912/Airline-Passenger-Satisfaction-Prediction" target="_blank">Airline Passenger Satisfaction</a></li>
+            </ul>
+        </section>
 
-    <section id="soon">
-      <div class="section-title">🧪 Soon to be Projects</div>
-      <div class="card">BizGPT (coming soon)</div>
-      <div class="card">Budget Tracker (coming soon)</div>
-    </section>
+        <section id="soon">
+            <h2>🛠️ Soon to be Projects</h2>
+            <p>BizGPT, Budget Tracker</p>
+        </section>
 
-    <section id="certificates">
-      <div class="section-title">📜 Certificates</div>
-      <div class="card"><a href="https://drive.google.com/drive/folders/1K7CuWIKz-yxh7GgGuJXpQmpZU9UzJGN_" target="_blank">View Certificates Folder</a></div>
-    </section>
+        <section id="certificates">
+            <h2>📜 Certificates</h2>
+            <ul>
+                <li><a href="https://drive.google.com/drive/folders/1K7CuWIKz-yxh7GgGuJXpQmpZU9UzJGN_" target="_blank">View Certificates</a></li>
+            </ul>
+        </section>
 
-    <section id="resume">
-      <div class="section-title">📄 Resume</div>
-      <div class="card"><a href="https://drive.google.com/file/d/1dmrBnhrcO0OtSVn8iEIiIRHqYSRc5Ee5/view?usp=sharing" target="_blank">Download Resume</a></div>
-    </section>
-  </main>
+        <section id="resume">
+            <h2>📄 Resume</h2>
+            <a href="https://drive.google.com/file/d/1dmrBnhrcO0OtSVn8iEIiIRHqYSRc5Ee5/view?usp=sharing" target="_blank">Download Resume</a>
+        </section>
+    </main>
+
+    <script>
+        function showSection(id) {
+            const sections = document.querySelectorAll('main section');
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 </body>
 
 </html>
