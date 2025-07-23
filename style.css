@@ -1,16 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Khushi's Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="container">
-    <h1>Hello, I'm Khushi</h1>
-    <p>Data Scientist | AI Enthusiast | Lifelong Learner</p>
-  </div>
-</body>
-</html>
+/* Reset default margin and padding */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
 
+  /* Pastel animated background */
+  background: linear-gradient(270deg, 
+    #E4ACB2,  /* Cherry Blossom Pink */
+    #EABCA8,  /* Desert Sand */
+    #FAEDCD,  /* Papaya Whip */
+    #CCD5AE,  /* Tea Green */
+    #99BAB9,  /* Ash Mist */
+    #E4ACB2   /* Repeat for smooth looping */
+  );
+  background-size: 1000% 1000%;
+  animation: gradientFlow 20s ease infinite;
+  transition: background 1s ease-in-out;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Background animation keyframes */
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Center content beautifully */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
