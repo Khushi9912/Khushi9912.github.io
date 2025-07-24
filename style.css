@@ -1,52 +1,57 @@
+/* Reset and Base */
 body {
   margin: 0;
   padding: 0;
   height: 100vh;
   background: linear-gradient(270deg, 
-    #E4ACB2, #EABCA8, #FAEDCD, #CCD5AE, #99BAB9, #E4ACB2
-  );
+    #E4ACB2, #EABCA8, #FAEDCD, #CCD5AE, #99BAB9, #E4ACB2);
   background-size: 1000% 1000%;
   animation: gradientFlow 20s ease infinite;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
 }
 
+/* Background Animation */
 @keyframes gradientFlow {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
+/* Container aligned to left */
 .container {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-  text-align: center;
-  padding: 1rem;
+  padding-left: 8%;
+  text-align: left;
 }
 
-.intro {
-  font-size: 1.2rem;
-  color: #444;
+/* Headings */
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
 }
 
-.name {
+h1 {
   font-size: 4rem;
   font-weight: bold;
-  margin: 0.5rem 0;
+  margin: 0;
 }
 
-.role {
-  font-size: 1.5rem;
+/* Tagline */
+.highlight {
+  font-size: 1.2rem;
+  font-weight: 600;
   color: #555;
-  margin: 0.5rem 0;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
 }
 
-.tagline {
+/* Subtitle */
+.subtitle {
   font-size: 1rem;
-  color: #666;
-  font-style: italic;
-  margin-top: 0.5rem;
+  font-weight: 400;
+  color: #444;
 }
