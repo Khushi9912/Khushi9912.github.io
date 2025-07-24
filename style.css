@@ -1,39 +1,22 @@
-/* Reset default margin and padding */
 body {
   margin: 0;
   padding: 0;
   height: 100vh;
-
-  /* Pastel animated background */
   background: linear-gradient(270deg, 
-    #E4ACB2,  /* Cherry Blossom Pink */
-    #EABCA8,  /* Desert Sand */
-    #FAEDCD,  /* Papaya Whip */
-    #CCD5AE,  /* Tea Green */
-    #99BAB9,  /* Ash Mist */
-    #E4ACB2   /* Repeat for smooth looping */
+    #E4ACB2, #EABCA8, #FAEDCD, #CCD5AE, #99BAB9, #E4ACB2
   );
   background-size: 1000% 1000%;
   animation: gradientFlow 20s ease infinite;
-  transition: background 1s ease-in-out;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
 }
 
-/* Background animation keyframes */
 @keyframes gradientFlow {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-/* Center content beautifully */
 .container {
   display: flex;
   flex-direction: column;
@@ -41,29 +24,29 @@ body {
   align-items: center;
   height: 100vh;
   text-align: center;
+  padding: 1rem;
 }
 
-/* Top small intro text */
-.intro-text {
+.intro {
   font-size: 1.2rem;
-  color: #f5f5f5;
-  margin: 0;
-  letter-spacing: 1.5px;
+  color: #444;
 }
 
-/* Big main name */
-h1 {
+.name {
   font-size: 4rem;
   font-weight: bold;
-  color: #ffffff;
   margin: 0.5rem 0;
-  text-transform: uppercase;
 }
 
-/* Tagline or title */
+.role {
+  font-size: 1.5rem;
+  color: #555;
+  margin: 0.5rem 0;
+}
+
 .tagline {
-  font-size: 1.4rem;
-  color: #fdfdfd;
+  font-size: 1rem;
+  color: #666;
   font-style: italic;
-  margin-top: 0;
+  margin-top: 0.5rem;
 }
